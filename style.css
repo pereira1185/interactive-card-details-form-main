@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Grotesk";
+    position: relative;
+}
+.row {
+    height: 100vh;
+}
+.left-box {
+    background-image: url('./images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+}
+.card {
+    width: 24em;
+    height: 13em;
+    background: transparent;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.card-front {
+    background-image: url('./images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 30px;
+    transform: translate(0.5em);
+}
+.card-back {
+    background-image: url('./images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(6em);
+}
+.card-logo {
+    margin-bottom: 50px;
+}
+#number {
+    height: 60px;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px black;
+}
+#name, #year, #month {
+    font-size: 0.9em;
+}
+#card-number {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+.name-date {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    font-weight: 100;
+    text-shadow: 1px 1px black;
+}
+.card-back {
+    position: relative;
+}
+.cvc {
+    position: absolute;
+    top: 45%;
+    right: 13%;
+    font-weight: 100;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+/* Form */
+
+.form-box {
+    width: 450px;
+    display: block;
+}
+form label {
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+.field {
+    margin-bottom: 20px;
+}
+form input {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+form input::placeholder {
+    color: rgb(186, 186, 186);
+}
+#card-month, #card-year {
+    width: 70px;
+}
+form button {
+    width: 100%;
+    background-color: #1A0826;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+form button:hover {
+    background-color: #371151;
+}
+
+/* Error validation styling */
+
+.error {
+    font-size: 0.8em;
+    color: rgb(252, 37, 37);
+    padding-top: 10px;
+}
+#error-name {
+    display: none;
+}
+#error-number {
+    display: none;
+}
+#error-number-digits {
+    display: none;
+}
+#error-month-year {
+    display: none;
+}
+
+/* Thank you box */
+
+.thank-you-box {
+    display: none;
+}
+.icon-success {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(#6539E8, #600493);
+    border-radius: 50%;
+    margin: auto;
+}
+.thanks-title {
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+.details {
+    color: gray;
+}
+.thank-you-box button {
+    width: 100%;
+    background-color: #1A0826;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.thank-you-box button:hover {
+    background-color: #371151;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+
+    .left-box {
+        background-image: url('./images/bg-main-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 35vh;
+        position: relative;
+    }
+    .card-front {
+        transform: scale(0.8);
+        top: 12em;
+        left: -4em;
+        z-index: 1;
+    }
+    .card-back {
+        transform: scale(0.8);
+        top: -8.7em;
+        right: -4em;
+    }
+
+    .field {
+        margin-bottom: 5px;
+    }
+    form label {
+        padding-bottom: 0;
+    }
+    #error-name, #error-number, #error-month-year, #error-cvc {
+        padding: 0;
+    }
+}
